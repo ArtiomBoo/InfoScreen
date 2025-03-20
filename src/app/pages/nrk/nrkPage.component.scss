@@ -1,0 +1,29 @@
+.wrapper-single {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-auto-rows: auto;
+  gap: 20px;
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media (max-width: 1080px) and (min-width: 600px) {
+  .wrapper-single {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for vertical screens */
+  }
+}
+@media (max-width: 600px) {
+  .wrapper-single {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    max-height: 100vh; /* Adjust so it doesn't exceed screen height */
+    overflow-y: auto; /* Enables vertical scrolling */
+    scrollbar-width: thin; /* Ensures the scrollbar doesn't take too much space */
+  }
+}
+
+@media (min-width: 1081px) {
+  .wrapper-single > app-news:nth-child(9) {
+    display: none;
+  }
+}

@@ -1,0 +1,59 @@
+.news-card {
+  position: relative; /* Needed for absolute positioning of overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centers content vertically */
+  text-align: center;
+  padding: 15px;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px 8px 0 0;
+  border: 2px solid white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  aspect-ratio: 16 / 9; /* Keeps a consistent proportion */
+  overflow: hidden;
+}
+
+/* Overlay to darken the background */
+.news-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Darkens the background */
+  border-radius: 8px;
+}
+
+/* Ensures text remains centered */
+.news-title {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%; /* Prevents text from stretching */
+  height: 100%; /* Makes sure it takes up full space */
+  padding: 10px;
+}
+
+/* Make title bold and large */
+.news-title h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.news-content {
+  background-color: white;
+  font-size: 24px;
+  border-radius: 0 0 8px 8px;
+  padding: 10px;
+  @media screen and (max-width: 600px) {
+    font-size: 12px;
+  }
+}

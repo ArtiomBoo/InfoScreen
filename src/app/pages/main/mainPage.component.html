@@ -1,0 +1,10 @@
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+
+<div *ngIf="!lunch">
+  <h1 class="hero-title animate fadeInLeft delay-400">{{ title }}</h1>
+</div>
+<div *ngIf="lunch">
+  <h1 class="hero-title hero-lunsj animate fadeInLeft delay-400">
+    <img ngSrc="../assets/img/lunsj.gif" height="600" width="600" class="responsive-gif">
+  </h1>
+</div>

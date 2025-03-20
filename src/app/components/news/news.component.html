@@ -1,0 +1,17 @@
+
+<!--<div class="newsObject">-->
+<!--  <div class="newsImage">-->
+<!--    <img *ngIf="newsItems.enclosure?.link" [src]="newsItems.enclosure?.link" alt="{{ newsItems.title }}" width="250px">-->
+<!--  </div>-->
+<!--  <div class="newsTitle">{{ newsItems.title }}</div>-->
+<!--  <div>{{ getTruncatedDescription() }}</div>-->
+<!--</div>-->
+
+<div class="news-card" [ngStyle]="{'background-image': newsItems.enclosure?.link ? 'url(' + newsItems.enclosure.link + ')' : 'none'}">
+  <div class="news-title">
+    <h3>{{ newsItems.title }}</h3>
+  </div>
+</div>
+<div class="news-content">
+  {{ getTruncatedDescription() }}
+</div>

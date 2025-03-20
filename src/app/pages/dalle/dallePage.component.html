@@ -1,0 +1,9 @@
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700|Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+
+<div class="fact-card">
+  <div class="img-card" [ngStyle]="{'background-image': imageUrl ? 'url(' + imageUrl + ')' : 'none'}"></div>
+  <div class="fact-content">
+    {{ revisedPrompt }}
+  </div>
+</div>
+

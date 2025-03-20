@@ -1,0 +1,51 @@
+$font-sans-serif : 'Roboto Condensed', sans-serif;
+/* === HEADER CONTAINER === */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 40px;
+  color: white;
+}
+
+/* === NEWS TITLE === */
+.news-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: $font-sans-serif;
+  @media screen and (max-width: 600px) {
+    font-size: 1.3rem;
+  }
+}
+
+/* === TIME, DATE & WEATHER === */
+.time-container {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.time {
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: $font-sans-serif;
+  @media screen and (max-width: 600px) {
+    font-size: 1.3rem;
+  }
+}
+
+.date {
+  font-size: 1.2rem;
+  font-family: $font-sans-serif;
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+  }
+}
+
+.weather {
+  font-size: 1rem;
+  color: #ddd;
+  font-family: $font-sans-serif;
+}

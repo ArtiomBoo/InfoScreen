@@ -1,0 +1,104 @@
+$font-sans-serif : 'Roboto Condensed', sans-serif;
+$font-serif      : 'Playfair Display', serif;
+
+// Start Animation Tweaks
+// Need to refactory and Sassify–just proof-of-concept and testing right now
+// Basically tweaking transform, translates inside keyframes and adding delays
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-12px, 0, 0);
+    //transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-12px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+.animate {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.2, 0.3, 0.25, 0.9);
+}
+
+.delay {
+  animation-delay: 1s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+.delay-700 {
+  animation-delay: 0.7s;
+}
+
+.delay-800 {
+  animation-delay: 0.8s;
+}
+
+//------------------
+
+.img-card {
+  position: relative; /* Needed for absolute positioning of overlay */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px 8px 0 0;
+  border: 4px solid white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0);
+  aspect-ratio: 1 / 1; /* Keeps a consistent proportion */
+  overflow: hidden;
+}
+
+/* Overlay to darken the background */
+.img-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.fact-content {
+  background-color: white;
+  font-size: 40px;
+  border-radius: 0 0 8px 8px;
+  padding: 10px;
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+  }
+}
+
+.fact-card{
+  width: 600px;
+  @media screen and (max-width: 600px) {
+    width: 330px;
+  }
+  @media screen and (max-width: 1080px) and (min-width: 600px) {
+    width: 720px;
+  }
+}

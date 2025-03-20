@@ -1,0 +1,36 @@
+.hero {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  backface-visibility: hidden;
+  min-height: 100vh; /* 🔥 Ensure scrolling works */
+  overflow: auto; /* 🔥 Allow scrolling */
+  position: relative;
+  width: 100%;
+
+  @media screen and (max-width: 600px) {
+    height: auto; /* Allow content to define height */
+    overflow: visible; /* Enable scrolling */
+  }
+}
+
+.hero-container {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
+  // set our fade for when the JS kicks in on scroll
+  -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  -webkit-transition-duration: 1.2s;
+  transition-duration: 1.2s;
+
+  //@media screen and (max-width: 600px) {
+  //  position: unset;
+  //  transform: initial;
+  //}
+}
